@@ -1,5 +1,11 @@
+import Header from '@/components/Header';
+
 const Home = () => {
-  return <div className="text-3xl text-sky-500">hello!</div>;
+  return (
+    <>
+      <Header label="home" />
+    </>
+  );
 };
 
 export default Home;
