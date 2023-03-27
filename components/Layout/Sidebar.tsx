@@ -12,14 +12,23 @@ const Sidebar = () => {
   const { data: currentUser } = useCurrentUser();
 
   const items = [
-    { label: 'Home', href: '/', icon: BsHouseFill },
     {
+      icon: BsHouseFill,
+      label: 'Home',
+      href: '/',
+    },
+    {
+      icon: BsBellFill,
       label: 'Notifications',
       href: '/notifications',
-      icon: BsBellFill,
       auth: true,
     },
-    { label: 'Profile', href: '/users/123', icon: FaUser, auth: true },
+    {
+      icon: FaUser,
+      label: 'Profile',
+      href: `/users/${currentUser?.id}`,
+      auth: true,
+    },
   ];
 
   return (
